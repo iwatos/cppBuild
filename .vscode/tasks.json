@@ -7,18 +7,22 @@
             "command": "g++",
             "args": [
                 "-g",
+                "-I",
+                "/usr/local/Cellar/boost/1.70.0/include",
                 "${file}",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}",
                 "&&",
-                "${fileDirname}/${fileBasenameNoExtension}"
+                "${fileDirname}/${fileBasenameNoExtension}",
+                "<",
+                "${fileDirname}/input.txt"
             ],
             "options": {
                 "cwd": "${fileDirname}"
             },
             "problemMatcher": [
                 "$gcc"
-            ], 
+            ],
             "group": {
                 "kind": "build",
                 "isDefault": true
